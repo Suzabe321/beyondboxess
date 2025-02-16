@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Boxes - Luxury Gift Boxes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --font-size: 16px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: var(--font-size);
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Settings Panel */
+        .settings-panel {
+            position: fixed;
+            right: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #f1f1f1;
+            padding: 1rem;
+            transition: 0.3s;
+        }
+
+        .settings-panel.active {
+            right: 0;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .order-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo">Beyond Boxes</a>
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+            <a href="#" id="settings-toggle"><i class="fas fa-cog"></i></a>
+        </div>
+    </nav>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settings-panel">
+        <h3>Settings</h3>
+        <div>
+            <label>Text Size:</label>
+            <input type="range" min="12" max="24" value="16" id="font-size-slider">
+        </div>
+        <div>
+            <label>Theme:</label>
+            <select id="theme-selector">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="products">
+        <!-- Birthday Special -->
+        <div class="product-card">
+            <h3>Birthday Special</h3>
+            <p>Available variants:</p>
+            <ul>
+                <li>Premium Birthday Box</li>
+                <li>Wooden Birthday Box</li>
+                <li>Surprise Birthday Box</li>
+                <li>Customized Birthday Box</li>
+                <li>Deluxe Birthday Box</li>
+            </ul>
+            <a href="https://wa.me/917406839266?text=I'm%20interested%20in%20Birthday%20Special%20Box" class="order-btn">Order Now</a>
+        </div>
+
+        <!-- Anniversary Collection -->
+        <div class="product-card">
+            <h3>Anniversary Collection</h3>
+            <p>Available variants:</p>
+            <ul>
+                <li>Romantic Anniversary Box</li>
+                <li>Golden Anniversary Box</li>
+                <li>Silver Anniversary Box</li>
+                <li>Photo Anniversary Box</li>
+                <li>Luxury Anniversary Box</li>
+            </ul>
+            <a href="https://wa.me/917406839266?text=I'm%20interested%20in%20Anniversary%20Collection" class="order-btn">Order Now</a>
+        </div>
+
+        <!-- Corporate Gifts -->
+        <div class="product-card">
+            <h3>Corporate Gifts</h3>
+            <p>Available variants:</p>
+            <ul>
